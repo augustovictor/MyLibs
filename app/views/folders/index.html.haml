@@ -1,0 +1,9 @@
+%h1 Folders
+
+- if @folders.empty?
+  %i No folders yet
+
+- unless @folders.empty?
+  %ul
+    - @folders.each do |folder|
+      %li= link_to folder.name, user_folder_path(current_user, folder)

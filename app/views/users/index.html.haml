@@ -1,0 +1,9 @@
+%h1 Users
+
+- if @users.empty?
+  %span No users
+
+-unless @users.empty?
+  - @users.each do |user|
+    %p= user.email
+

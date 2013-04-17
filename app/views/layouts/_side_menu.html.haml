@@ -1,0 +1,46 @@
+%ul.side_menu_list
+  %li
+    = link_to content_tag(:i,'', class: 'icon-upload icon-large') + ' Upload File', '', class: 'btn btn-success btn-large btn-upload'
+
+  %li#my_libs_folders
+    %i.icon-chevron-down
+    / = link_to 'MyLibs', ''
+    %span
+      MyLibs
+    %span.pull-right
+      = @folders.size
+  %li.folders_container
+    %ul
+      %li
+        = link_to new_user_folder_path(current_user) do
+          %i.icon-plus-sign
+          %span New folder
+      - if @folders.empty?
+        %i No folders
+
+      - unless @folders.empty?
+        - @folders.each do |folder|
+          %li
+            = link_to (user_folder_path(current_user, folder)) do
+              %i.icon-folder-close
+              = folder.name
+              %span.label.label-info.pull-right
+                13
+
+  %li
+    %i.icon-user
+    = link_to 'Friends', ''
+    %span.pull-right
+      13
+
+  %li
+    %i.icon-bookmark
+    = link_to 'Recommendations', ''
+    %span.pull-right
+      13
+
+  %li
+    %i.icon-inbox
+    = link_to 'Summaries', ''
+    %span.pull-right
+      13

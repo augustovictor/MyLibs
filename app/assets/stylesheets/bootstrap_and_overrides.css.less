@@ -1,0 +1,110 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings.png");
+@iconWhiteSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings-white.png");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+// Note: If you use asset_path() here, your compiled bootstrap_and_overrides.css will not
+//       have the proper paths. So for now we use the absolute path.
+@fontAwesomeEotPath: asset-path("fontawesome-webfont.eot?v=3.0.2");
+@fontAwesomeEotPath_iefix: asset-path("fontawesome-webfont.eot?#iefix&v=3.0.2");
+@fontAwesomeWoffPath: asset-path("fontawesome-webfont.woff?v=3.0.2");
+@fontAwesomeTtfPath: asset-path("fontawesome-webfont.ttf?v=3.0.2");
+
+// Font Awesome
+@import "fontawesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+
+.box-shadow {
+  box-shadow: 0px 3px 2px lightgray;
+} /*shadow-box*/
+
+.btn-upload {
+  width: 200px !important;
+} /*btn-upload*/
+
+.side_menu {
+  margin-left: -47px;
+  margin-top: -6px;
+}
+
+.content {
+  margin-top: 45px;
+}
+
+.side_menu_list {
+
+  background: #f7f7f7;
+
+  .folders_container {
+    background: #FAFAFA;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: none;
+    margin: 0;
+
+    ul{
+      margin: 0;
+      padding: 0;
+
+      li {
+        border: 0;
+        margin: 1px 0;
+        padding: 5px 5px 5px 10px;
+
+        &:hover { background: #fcfcfc ; }
+
+        a {
+
+          i {
+            color: #474747;
+          } /*i*/
+
+          span:hover {
+            text-weight: bold;
+          }
+
+          text-decoration: none;
+
+        } /*a*/
+
+      } /*li*/
+
+    } /*ul*/
+
+    &:hover { background: #FAFAFA; }
+
+  } /*folders_container*/
+
+  li {
+    border-top: 1px solid white;
+    border-bottom: 1px solid #f2f2f2;
+    list-style-type: none;
+    padding: 5px 2px;
+
+    &:hover { background: #f1f1f1; }
+
+
+  } /*li*/
+
+  #my_libs_folders {
+    cursor: pointer;
+  } /*my_libs_folders*/
+
+} /*side_menu_list*/

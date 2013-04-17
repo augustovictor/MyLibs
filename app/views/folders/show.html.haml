@@ -1,0 +1,3 @@
+%h1= @folder.name
+= link_to 'Delete', user_folder_path(current_user, @folder), method: :delete, confirm: 'Delete folder?'
+= link_to 'Edit', edit_user_folder_path(current_user, @folder)
